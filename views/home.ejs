@@ -1,0 +1,14 @@
+<%- include("header"); -%>
+    <h1>HOME</h1>
+    <p><%=lineone%></p>
+<% data.forEach((record)=>{ %>
+     <h1><%= record.title %></h1> 
+    <p>
+        <%= record.content.substring(0,100)%> ... 
+        <a href="/post/<%=record.title%>">Read more</a>
+     </p> 
+ <% }) %> 
+</body>
+</html>
+
+<%- include("footer"); -%>
